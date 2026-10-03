@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Valgharie — galerie Minecraft. Découvrez, partagez et explorez des créations Minecraft.">
+  <title>Valgharie — Le site des passionnés de Minecraft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#accueil" aria-label="Valgharie accueil">
+      <span class="brand-mark">V</span>
+      <span class="brand-copy"><strong>VALGHARIE</strong><small>LE SITE DES PASSIONNÉS DE MINECRAFT</small></span>
+    </a>
+
+    <nav class="nav">
+      <a class="nav-link active" href="#accueil">⌂ <span>Accueil</span></a>
+      <a class="nav-link" href="#galerie">▧ <span>Galerie</span></a>
+      <a class="nav-link" href="/live.html">🔴 <span>Lives</span></a>
+      <a class="nav-link" href="#mods">⚒ <span>Mods</span></a>
+      <a class="nav-link" href="#maps">◈ <span>Maps</span></a>
+      <a class="nav-link" href="#serveurs">▰ <span>Serveurs</span></a>
+      <a class="nav-link" href="#actualites">▤ <span>Actualités</span></a>
+      <a class="nav-link" href="#apropos">◌ <span>À propos</span></a>
+    </nav>
+
+    <div class="top-actions">
+      <label class="search">
+        <input id="searchInput" type="search" placeholder="Rechercher une image, un joueur, un mot-clé...">
+        <span>⌕</span>
+      </label>
+          <button class="login" id="loginBtn">♟ <span>Connexion</span></button>
+      <button class="signup" id="signupBtn">S'inscrire</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-logo">
+          <span class="hero-v">V</span>
+          <div><h1>ALGHARIE</h1><p>LE SITE DES PASSIONNÉS DE MINECRAFT</p></div>
+        </div>
+        <p class="hero-text">Découvrez, partagez et explorez des milliers d'images Minecraft<br>
+          dans notre galerie. Un site complet, pensé pour tous les joueurs,<br>
+          créateurs et passionnés de l'univers Minecraft.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#galerie">▧ &nbsp; Accéder à la Galerie</a>
+          <button class="btn ghost" id="discoverBtn">⇩ &nbsp; Découvrir le site <span>⌄</span></button>
+        </div>
+      </div>
+      <div class="hero-slogan">Tout Minecraft<br><em>en un seul endroit !</em></div>
+    </section>
+
+    <section id="galerie" class="gallery-section">
+      <div class="gallery-main">
+        <div class="section-heading">
+          <div>
+            <div class="heading-title"><span class="purple-icon">▧</span><h2>Galerie</h2></div>
+            <p>Toutes les images Minecraft validées par l’équipe Valgharie, en un seul endroit.</p>
+          </div>
+          
+        </div>
+
+        <div class="filters">
+          <div class="tabs" id="tabs">
+            <button class="tab active" data-filter="Toutes">Toutes</button>
+            <button class="tab" data-filter="Créations">Créations</button>
+            <button class="tab" data-filter="Paysages">Paysages</button>
+            <button class="tab" data-filter="Builds">Builds</button>
+            <button class="tab" data-filter="Skins">Skins</button>
+            <button class="tab" data-filter="Textures">Textures</button>
+            <button class="tab" data-filter="Mods">Mods</button>
+            <button class="tab" data-filter="Autres">Autres</button>
+          </div>
+          <select id="sizeFilter" class="size-filter">
+            <option value="all">☁ Toutes les tailles</option>
+            <option value="small">Petites</option>
+            <option value="medium">Moyennes</option>
+            <option value="large">Grandes</option>
+          </select>
+        </div>
+
+        <div id="galleryGrid" class="gallery-grid"></div>
+
+        <div class="pagination" id="pagination">
+          <button data-page="prev" aria-label="Page précédente">‹</button>
+          <button class="page active" data-page="1">1</button>
+          <button class="page" data-page="2">2</button>
+          <button class="page" data-page="3">3</button>
+          <button class="page" data-page="4">4</button>
+          <button class="page" data-page="5">5</button>
+          <span>…</span>
+          <button class="page" data-page="12">12</button>
+          <button data-page="next" aria-label="Page suivante">›</button>
+        </div>
+      </div>
+
+      <aside class="sidebar">
+        <div class="side-card">
+          <h3>🚀 &nbsp; Pourquoi Valgharie ?</h3>
+          <div class="benefit"><span>▧</span><div><strong>Galerie complète et illimitée</strong><small>Toutes vos images, toutes les tailles.</small></div></div>
+          <div class="benefit"><span>⚒</span><div><strong>Upload facile et rapide</strong><small>Ajoutez vos images en quelques secondes.</small></div></div>
+          <div class="benefit"><span>♟</span><div><strong>Communauté active</strong><small>Partagez avec des milliers de passionnés.</small></div></div>
+          <div class="benefit"><span>◉</span><div><strong>Design moderne et optimisé</strong><small>Une expérience fluide sur tous vos appareils.</small></div></div>
+        </div>
+
+        <div class="side-card stats">
+          <h3>♧ &nbsp; En quelques chiffres</h3>
+          <div class="stats-row">
+            <div><span>▧</span><strong>12 548</strong><small>Images</small></div>
+            <div><span>♟</span><strong>8 732</strong><small>Membres</small></div>
+            <div><span>♨</span><strong>1 248</strong><small>Uploads<br>aujourd'hui</small></div>
+          </div>
+        </div>
+
+        <div class="quote-card">
+          <p>“Parce que Minecraft<br>mérite un site à sa hauteur.”</p>
+          <span>— Valgharie</span>
+          <b>✦</b>
+        </div>
+      </aside>
+    </section>
+
+    <section class="placeholder-section" id="mods"><h2>Mods</h2><p>Une section prête à accueillir vos mods Minecraft.</p></section>
+    <section class="placeholder-section" id="maps"><h2>Maps</h2><p>Découvrez bientôt les maps de la communauté.</p></section>
+    <section class="placeholder-section" id="serveurs"><h2>Serveurs</h2><p>Annuaire de serveurs Minecraft.</p></section>
+    <section class="placeholder-section" id="actualites"><h2>Actualités</h2><p>Les dernières nouvelles de la communauté.</p></section>
+    <section class="placeholder-section" id="apropos"><h2>À propos</h2><p>Valgharie, un espace dédié aux passionnés.</p></section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">V</span><div><strong>VALGHARIE</strong><small>LE SITE DES PASSIONNÉS DE MINECRAFT</small></div></div>
+    <div class="footer-links"><a href="#accueil">Accueil</a><a href="#galerie">Galerie</a><a href="/live.html">Lives</a><a href="#mods">Mods</a><a href="#maps">Maps</a><a href="#serveurs">Serveurs</a><a href="#actualites">Actualités</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></div>
+    <div class="copyright">© 2025 Valgharie. Tous droits réservés. &nbsp; ◉ ◉ 𝕏 ◎ ◉</div>
+  </footer>
+
+
+  <div class="modal hidden" id="loginModal">
+    <div class="modal-box auth-box">
+      <button class="modal-close" data-close="loginModal">×</button>
+      <h2>Connexion</h2>
+      <p>Connectez-vous à votre compte Valgharie.</p>
+      <form id="loginForm">
+        <label>Email<input name="email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label>
+        <label>Mot de passe<input name="password" type="password" autocomplete="current-password" required placeholder="••••••••"></label>
+        <button class="btn primary auth-submit" type="submit">Se connecter</button>
+        <div class="auth-message" id="loginMessage"></div>
+      </form>
+      <button class="switch-auth" id="toSignup">Créer un compte</button>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="signupModal">
+    <div class="modal-box auth-box">
+      <button class="modal-close" data-close="signupModal">×</button>
+      <h2>Créer un compte</h2>
+      <p>Rejoignez la communauté Valgharie.</p>
+      <form id="signupForm">
+        <label>Email<input name="email" type="email" autocomplete="email" required placeholder="vous@exemple.fr"></label>
+        <label>Mot de passe<input name="password" type="password" minlength="8" autocomplete="new-password" required placeholder="8 caractères minimum"></label>
+        <label>Confirmer le mot de passe<input name="password2" type="password" minlength="8" autocomplete="new-password" required placeholder="Retapez le mot de passe"></label>
+        <button class="btn primary auth-submit" type="submit">Créer mon compte</button>
+        <div class="auth-message" id="signupMessage"></div>
+      </form>
+      <div class="verification-hint" id="verificationHint">Après l’inscription, un email de vérification sera envoyé à la même adresse. Clique sur le lien reçu avant de te connecter.</div>
+      <button class="switch-auth" id="toLogin">J’ai déjà un compte</button>
+    </div>
+  </div>
+
+
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
