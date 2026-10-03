@@ -261,8 +261,8 @@ function ensureAdminAccount(username, role, password){
 function seedAdmins(){
   // Initial credentials requested for this local/private build.
   // Change them in production and/or delete these defaults after first startup.
-  ensureAdminAccount("viewel_valghar@gmail.com","founder","youyouminecraft");
-  ensureAdminAccount("LeRoutier87","developer","200187");
+  ensureAdminAccount("viewelvalghar@gmail.com","founder","youyouminecraft");
+  ensureAdminAccount("LeRoutier87@gmail.com","developer","200187");
 }
 seedAdmins();
 
