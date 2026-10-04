@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Valgharie — Vérification</title><link rel="stylesheet" href="style.css"></head>
+<body><main style="min-height:100vh;display:grid;place-items:center;padding:20px">
+<section class="modal-box auth-box" style="position:relative;text-align:center">
+<h2 id="title">Vérification de l’email</h2><p id="msg">Vérification en cours…</p>
+<a class="btn primary auth-submit" href="/" style="display:inline-flex;text-decoration:none;justify-content:center">Retour au site</a>
+</section></main>
+<script>
+(async()=>{
+ const token=new URLSearchParams(location.search).get("token");
+ const r=await fetch("/api/auth/verify?token="+encodeURIComponent(token||""));
+ const d=await r.json().catch(()=>({error:"Erreur"}));
+ document.querySelector("#title").textContent=d.ok?"Email vérifié !":"Vérification impossible";
+ document.querySelector("#msg").textContent=d.ok?"Ton adresse email est maintenant vérifiée. Tu peux te connecter.":d.error;
+})();
+</script></body></html>
